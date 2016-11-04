@@ -20,18 +20,20 @@ double computeArea(Point &a, Point &b, Point &c) {
 }
 
 int main() {
-    double x1, y1, z1, x2, y2, z2, x3, y3, z3;
+    double x, y, z;
 
     cout << "Point 1: ";
-    cin >> x1 >> y1 >> z1;
-    cout << "Point 2: ";
-    cin >> x2 >> y2 >> z2;
-    cout << "Point 3: ";
-    cin >> x3 >> y3 >> z3;
+    cin >> x >> y >> z;
+    Point a(x, y, z);
 
-    Point a(x1, y1, z1);
-    Point b(x2, y2, z2);
-    Point c(x3, y3, z3);
+    cout << "Point 2: ";
+    cin >> x >> y >> z;
+    Point b(x, y, z);
+    
+    cout << "Point 3: ";
+    cin >> x >> y >> z;
+    Point c(x, y, z);
+
     double area = computeArea(a, b, c);
 
     cout << "Area is: " << area << endl;
